@@ -455,6 +455,37 @@ section {
   transition: all 0.3s ease-in-out;
   text-align: center;
   border: 1px solid #fff;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.services .icon-box:hover {
+  border-color: var(--primary-color);
+}
+
+.services .icon-box:hover .title a {
+  color: var(--primary-color);
+}
+
+.services .icon-box-summary {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border: 1px solid #fff;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.services .icon-box-summary:hover {
+  border-color: var(--primary-color);
+}
+
+.services .icon-box-summary:hover .title a {
+  color: var(--primary-color);
 }
 
 .services .title {
@@ -469,18 +500,10 @@ section {
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
-  border-color: var(--primary-color);
-}
-
-.services .icon-box:hover .title a {
-  color: var(--primary-color);
-}
-
 /*--------------------------------------------------------------
 # My Portfolio
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+/* .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
 
@@ -490,7 +513,7 @@ section {
 
 .portfolio .portfolio-item .portfolio-img img {
   transition: all 0.8s ease-in-out;
-}
+} */
 
 .bi {
   color: var(--primary-color);
@@ -546,4 +569,50 @@ section {
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
+}
+
+/* Languages */
+.languages .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border: 1px solid #fff;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.languages .icon-box:hover {
+  border-color: var(--primary-color);
+}
+
+.languages .icon-box:hover .title a {
+  color: var(--primary-color);
+}
+
+/* Programs */
+.programs .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border: 1px solid #fff;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.programs .icon-box:hover {
+  border-color: var(--primary-color);
+}
+
+.programs .icon-box:hover .title a {
+  color: var(--primary-color);
 }
