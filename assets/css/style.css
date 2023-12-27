@@ -503,17 +503,37 @@ section {
 /*--------------------------------------------------------------
 # My Portfolio
 --------------------------------------------------------------*/
-/* .portfolio .portfolio-item {
-  margin-bottom: 30px;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px;
 }
 
-.portfolio .portfolio-item .portfolio-img {
-  overflow: hidden;
+.image-item {
+  position: relative;
 }
 
-.portfolio .portfolio-item .portfolio-img img {
-  transition: all 0.8s ease-in-out;
-} */
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-item.extended {
+  grid-row: span 2;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 767px) {
+  .image-grid {
+      grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .image-item.extended {
+      grid-row: span 1; /* Normal height for extended item on small screens */
+  }
+}
 
 .bi {
   color: var(--primary-color);
