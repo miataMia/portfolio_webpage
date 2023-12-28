@@ -500,6 +500,21 @@ section {
   margin-bottom: 0;
 }
 
+.center-chevron {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-chevron:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.card-body {
+  border-style: none;
+}
+
 /*--------------------------------------------------------------
 # My Portfolio
 --------------------------------------------------------------*/
