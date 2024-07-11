@@ -1,3 +1,5 @@
+/* Existing styles from the provided CSS file */
+
 :root {
   --primary-color: #DFCCF5;
   --secondary-color: #fff;
@@ -14,23 +16,98 @@ a, p, h1, h2, h3, h4, h5, h6, li {
   color: #130722;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
-  z-index: 997;
-  transition: all 0.5s;
   height: 80px;
-  background: rgba(25, 28, 31, 0.8);
+  background: rgba(25, 28, 31, 0.8); /* Your original background color */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
-#header.header-transparent {
-  background: transparent;
+/* Add top padding to the first section to account for the fixed header */
+#hero {
+  padding-top: 80px; /* Equal to the header height */
 }
 
-#header.header-scrolled {
-  height: 60px;
-  background: rgba(25, 28, 31, 0.8);
+/* Ensure there's no overriding background color */
+.header-scrolled {
+  background: rgba(25, 28, 31, 0.8); /* Ensure this matches the original color */
+}
+
+/*--------------------------------------------------------------
+# Section
+--------------------------------------------------------------*/
+
+section {
+  padding: 60px 0; /* Adjust padding as needed */
+  margin: 0;
+}
+
+.section-bg {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title span {
+  position: absolute;
+  top: 30px;
+  color: #eef0f2;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 575px) {
+  .section-title h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .section-title span {
+    font-size: 38px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Contact details
+--------------------------------------------------------------*/
+#contact {
+  min-height: 40vh; /* Full viewport height */
 }
 
 /*--------------------------------------------------------------
@@ -324,63 +401,6 @@ a, p, h1, h2, h3, h4, h5, h6, li {
 
   100% {
     transform: translateY(-5px);
-  }
-}
-
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-}
-
-.section-bg {
-  background-color: white;
-}
-
-.section-title {
-  text-align: center;
-  padding: 30px 0;
-  position: relative;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  position: relative;
-  z-index: 2;
-}
-
-.section-title span {
-  position: absolute;
-  top: 30px;
-  color: #eef0f2;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  font-weight: 700;
-  font-size: 52px;
-  text-transform: uppercase;
-  line-height: 0;
-}
-
-.section-title p {
-  margin-bottom: 0;
-  position: relative;
-  z-index: 2;
-}
-
-@media (max-width: 575px) {
-  .section-title h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-
-  .section-title span {
-    font-size: 38px;
   }
 }
 

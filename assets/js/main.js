@@ -39,17 +39,32 @@
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    let position = window.scrollY
+    let header = select('#header')
+    let offset = header.offsetHeight
+
+    let activeSection = null;
+
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
+
+      let rect = section.getBoundingClientRect()
+      let sectionTop = rect.top + window.scrollY - offset - 50 // Added buffer of 50 pixels
+      let sectionBottom = sectionTop + section.offsetHeight
+
+      // Adjusted to ensure last section gets activated
+      if (position >= sectionTop && (position < sectionBottom || (navbarlink.hash === '#contact' && position + window.innerHeight >= document.body.scrollHeight))) {
+        activeSection = navbarlink;
       } else {
         navbarlink.classList.remove('active')
       }
     })
+
+    if (activeSection) {
+      activeSection.classList.add('active')
+    }
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
@@ -60,10 +75,6 @@
   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight
-
-    if (!header.classList.contains('header-scrolled')) {
-      offset -= 20
-    }
 
     let elementPos = select(el).offsetTop
     window.scrollTo({
@@ -108,7 +119,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
@@ -126,30 +137,13 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the URL
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash)
       }
-    }
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
     }
   });
 
@@ -167,6 +161,5 @@
       chevronIcon.classList.add('bi-chevron-down');
     });
   });
-
 
 })()

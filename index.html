@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
+  <header id="header" class="fixed-top d-flex justify-content-center align-items-center">
 
     <nav id="navbar" class="navbar">
       <ul>
@@ -387,8 +387,16 @@
           <h2>My Portfolio</h2>
         </div>
         <div class="image-grid">
-          <div class="image-item"><img src="assets/img/portfolio/1.webp" class="zoomable-image" alt="Image 1"></div>
-          <div class="image-item"><img src="assets/img/portfolio/2.webp" class="zoomable-image" alt="Image 2"></div>
+          <div class="image-item">
+            <a href="portfolio1.html">
+                <img src="assets/img/portfolio/1.webp" class="zoomable-image" alt="Image 1">
+            </a>
+        </div>
+          <div class="image-item">
+            <a href="portfolio2.html">
+                <img src="assets/img/portfolio/2.webp" class="zoomable-image" alt="Image 2">
+            </a>
+        </div>
           <div class="image-item"><img src="assets/img/portfolio/3.webp" class="zoomable-image" alt="Image 3"></div>
           <div class="image-item"><img src="assets/img/portfolio/4.webp" class="zoomable-image" alt="Image 4"></div>
           <div class="image-item"><img src="assets/img/portfolio/6.webp" class="zoomable-image" alt="Image 5"></div>
@@ -429,36 +437,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 
   <script src="assets/js/main.js"></script>
-  <script>
-
-document.querySelectorAll('.zoomable-image').forEach(image => {
-  image.addEventListener('click', function() {
-    // Create an overlay div
-    const overlay = document.createElement('div');
-    overlay.classList.add('fullscreen-overlay');
-
-    // Create an img element and set its source to the clicked image's source
-    const img = document.createElement('img');
-    img.src = this.src; // Using 'this' to refer to the clicked image
-
-    // Append the image to the overlay
-    overlay.appendChild(img);
-
-    // Append the overlay to the body
-    document.body.appendChild(overlay);
-
-    // Add a click event to the overlay to remove it on click
-    overlay.addEventListener('click', () => {
-      overlay.remove();
-    });
-
-    // Add the 'active' class to display the overlay
-    overlay.classList.add('active');
-  });
-});
-
-
-  </script>
 
 </body>
 
