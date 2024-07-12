@@ -1,443 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Solomiia Skoropad</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>Solomiaa Skoropad</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/icon.png" rel="icon" />
+    <link href="assets/img/icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/icon.png" rel="icon">
-  <link href="assets/img/icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
-    rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper -->
+    <link
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Swiper -->
-  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <style>
+      .image-item,
+      .section-title,
+      .social-links,
+      .portfolio {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
 
+      .image-item.visible,
+      .section-title.visible,
+      .social-links.visible,
+      .portfolio.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
 
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
+  <body>
+    <header
+      id="header"
+      class="fixed-top d-flex justify-content-center align-items-center"
+    >
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </header>
 
-<body>
-  <header id="header" class="fixed-top d-flex justify-content-center align-items-center">
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
-        <li><a class="nav-link scrollto" href="#services">Qualities</a></li>
-        <li><a class="nav-link scrollto" href="#programs">Programs</a></li>
-        <li><a class="nav-link scrollto" href="#languages">Languages</a></li>
-        <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-
-  </header>
-  <section id="hero">
-    <div class="hero-container">
-      <h1>Solomiia Skoropad</h1>
-      <a href="#resume" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
-    </div>
-  </section>
-
-  <main id="main">
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <span>My Resume</span>
-          <h2>My Resume</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Solomiia Skoropad</h4>
-              <p><em>I'm a 19-year-old girl who has spent her entire life immersed in the world of creativity. With a
-                  passion for creating immersive visual
-                  experiences, I'm carving my path in 3D design by fusing creativity and technology.
-                  <br>
-                  <hr>
-                  Jestem 19-letnią dziewczyną, która całe swoje życie spędziła w świecie kreatywności. Z
-                  pasją do tworzenia wciągających
-                  doświadczeń wizualnych, wytyczam swoją ścieżkę w projektowaniu 3D, łącząc kreatywność i
-                  technologię.
-                </em></p>
-              <p>
-              <ul>
-                <li>Wrocław</li>
-              </ul>
-              </p>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor</h4>
-              <h5>2021 - 2024 (DSW University of Lower Silesia)</h5>
-              <p>
-
-                Starting from October 2021 I am a student of
-                DSW University of Lower Silesia in beautiful
-                city Wroclaw. I have been a good student with
-                awesome grade, with avarage of <b>4.9</b> and projects ever since and not
-                planning to stop.
-
-                <br>
-                <hr>
-                Zaczynając od października 2021 jestem studentką DSW Uniwersytetu Dolnośląskiego w pięknym mieście
-                Wrocław.
-                Jestem dobrą studentką z wysoką oceną średnią <b>4.9</b> i wybitnymi projektami od początku studiów i
-                nie zamierzam stopować.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Current Experience</h3>
-            <div class="resume-item">
-              <h5>3D assets and animation</h5>
-              <p>
-                Had a small 4 months experience working with
-                one of teachers in DSW university , while creating
-                advertisment for <b>"Pizzeria 105"</b>. During the whole process I was helping
-                with creating 3D assets and animations relying on
-                requests. Also was taking part in filming process
-                and post-production.
-                Even tho my experience is pretty small, I am looking
-                forward to make it bigger.
-                <br>
-                <hr>
-                Miałam małe 4-miesięczne doświadczenie w pracy z
-                jednym z wykładowców na uczelni DSW, podczas tworzenia
-                reklamy dla <b>"Pizzerii 105"</b>. Podczas całego procesu pomagałam
-                w tworzeniu zasobów 3D i animacji w oparciu o
-                prośby. Brałam również udział w procesie filmowania i postprodukcji.
-                Chociaż moje doświadczenie jest dość małe, nie mogę się doczekać, aby je rozwijać.
-              </p>
-            </div>
-          </div>
-        </div>
-
+    <section id="hero">
+      <div class="hero-container">
+        <h1>Solomiia Skoropad</h1>
+        <a href="#resume" class="btn-scroll scrollto" title="Scroll Down"
+          ><i class="bx bx-chevron-down"></i
+        ></a>
       </div>
     </section>
 
-    <section id="services" class="services">
+    <main id="main">
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+          <div class="section-title">
+            <span>My Portfolio</span>
+            <h2>My Portfolio</h2>
+          </div>
+          <div class="image-grid">
+            <div class="image-item">
+              <a href="portfolio1.html">
+                <div class="video-container">
+                  <video id="myVideo" muted>
+                    <source src="assets/video/7.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                  </video>
+                </div>
+              </a>
+              <div class="text-overlay">Arian 6</div> 
+            </div>            
+          </div>
+        </div>
+      </section>
+
       <div class="container">
-
-        <div class="section-title">
-          <span>My Qualities</span>
-          <h2>My Qualities</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Hardworking</h4>
-              <p class="description">
-                I am always willing to work and try my best to achieve best results.
-                Everyone has some things they do not know, but you can always learn.
-                I am that person who is all the time ready for getting new knowledge
-                and self development. Curiosity always win.
-              </p>
+        <section id="contact" class="contact">
+          <div class="container">
+            <div class="section-title">
+              <span>Contact Me</span>
+              <h2>Contact Me</h2>
             </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Cooperativeness</h4>
-              <p class="description">
-                I am enjoying group work, ready to give new ideas and head to setted goal
-                with teammates. This quality is double sided for me, because not
-                only I can be a member, but also a leader. Love to organization of
-                tasks, setting the goal, motivation and analizing people are giving
-                an awesome possibility to create perfect team. Also listening to
-                different opinions, comments and judgments, choosing and connecting them
-                leads to polished and better result.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Creativity</h4>
-              <p class="description">
-                In my opinion this quality is the most important especially in this industry. Hence,
-                personally I have a lot of it and am willing to use it as much as possible, even in
-                every day life, to make it slightly more interesting.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Critical thinking</h4>
-              <p class="description">
-                Never let unexpected situations to interrupt me from the path. I am
-                always trying to find new exits fast and not let it affect the final
-                result. If there are any, then I will make some.
-                Espesially if I am passionate about something, it is hard to stop me.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <button class="btn center-chevron" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePanel"
-            aria-expanded="false" aria-controls="collapsePanel">
-            <i class="bi bi-chevron-down chevronIcon" id="chevronIcon"></i>
-          </button>
-          <div class="collapse" id="collapsePanel">
-            <div class="card card-body">
-              <div class="row">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                  <div class="icon-box">
-                    <h4 class="title">Pracowitość</h4>
-                    <p class="description">
-                      Zawsze mam wielką chęć do pracy i staram się osiągać najlepsze wyniki. Nie ma osoby, która wie
-                      wszystko, ale zawsze można się czegoś nowego nauczyć. Jestem osobą, która jest ciągle gotowa do
-                      zdobywania nowej wiedzy i na samorozwój. Ciekawość zawsze przeważa.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                  <div class="icon-box">
-                    <h4 class="title">Kooperatywnośc</h4>
-                    <p class="description">
-                      Lubię pracę w grupie, jestem gotowa na nowe pomysły i dążę do wyznaczonego celu razem z zespołem.
-                      Dla mnie ta cecha oznacza nie tylko bycie członkiem, ale także liderem. Organizowanie zadań,
-                      wyznaczanie celów, motywowanie oraz analizowanie ludzi dają mi idealną możliwość stworzenia
-                      perfekcyjnego zespołu. Również słuchanie opinii i komentarzy, analiza różnych osądów, a następnie
-                      wybieranie i łączenie ich prowadzi do osiągania bardziej precyzyjnych i lepszych wyników.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                  <div class="icon-box">
-                    <h4 class="title">Kreatywność</h4>
-                    <p class="description">
-                      Moim zdaniem najważniejszą cechą jest kreatywność, zwłaszcza w tej branży. Dlatego osobiście
-                      posiadam dużo oryginalności i mam wielką chęć do wykorzystywania jej w codziennym życiu, aby
-                      uczynić je bardziej interesującym.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                  <div class="icon-box">
-                    <h4 class="title">Krytyczne myślenie</h4>
-                    <p class="description">
-                      Nigdy nie pozwalam, aby zaskakujące sytuacje przeszkadzały mi w drodze. Zawsze staram się znaleźć
-                      nowe wyjścia dość szybko, aby nie wpływały one na wynik końcowy. Jeżeli nie istnieje rozwiązanie,
-                      wymyślę nowe. Szczególnie kiedy podchodzę do pracy z wielką pasją, ciężko mnie zatrzymać.
-                    </p>
-                  </div>
-                </div>
+            <div class="d-flex justify-content-center">
+              <div class="social-links">
+                <h6>s.solomeya@ukr.net</h6>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="icon-box-summary row">
-          <h4 class="title">
-            I can write a lot of other qualities I have, but let's be frank it is better to show in real life cases.
-            <br>
-            <hr>
-            Mogę napisać wiele innych umiejętności które posiadam, ale lepiej pokażę je w prawdziwym życiu.
-          </h4>
-        </div>
-
+        </section>
       </div>
-    </section>
+    </main>
 
-    <section id="programs" class="programs">
-      <div class="container">
+    <footer id="footer"></footer>
 
-        <div class="section-title">
-          <span>Programs</span>
-          <h2>Programs</h2>
-        </div>
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Blender</h4>
-            </div>
-          </div>
+    <script src="assets/js/main.js"></script>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Autodesk Maya (Maya)</h4>
-            </div>
-          </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          threshold: 0.1,
+        };
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Krita</h4>
-            </div>
-          </div>
+        const observerCallback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        };
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Adobe After Effects</h4>
-            </div>
-          </div>
-        </div>
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
 
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Adobe Photoshop
-              </h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Autodesk 3ds MAX</h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Visual Studio Code
-              </h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Python Basics</h4>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="languages" class="languages">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Language skills</span>
-          <h2>Language skills</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Ukrainian: C2</h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">English: C1</h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Polish: B2</h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Turkish: B1</h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Spanish: A1</h4>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <h4 class="title">Russian: C1</h4>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <span>My Portfolio</span>
-          <h2>My Portfolio</h2>
-        </div>
-        <div class="image-grid">
-          <div class="image-item">
-            <a href="portfolio1.html">
-                <img src="assets/img/portfolio/1.webp" class="zoomable-image" alt="Image 1">
-            </a>
-        </div>
-          <div class="image-item">
-            <a href="portfolio2.html">
-                <img src="assets/img/portfolio/2.webp" class="zoomable-image" alt="Image 2">
-            </a>
-        </div>
-          <div class="image-item"><img src="assets/img/portfolio/3.webp" class="zoomable-image" alt="Image 3"></div>
-          <div class="image-item"><img src="assets/img/portfolio/4.webp" class="zoomable-image" alt="Image 4"></div>
-          <div class="image-item"><img src="assets/img/portfolio/6.webp" class="zoomable-image" alt="Image 5"></div>
-          <div class="image-item extended"><img src="assets/img/portfolio/5.webp" class="zoomable-image" alt="Image 6"></div>
-          <div class="image-item"><img src="assets/img/portfolio/7.webp" class="zoomable-image" alt="Image 7"></div>
-          <div class="image-item"><img src="assets/img/portfolio/8.webp" class="zoomable-image" alt="Image 8"></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container">
-      <section id="contact" class="contact">
-        <div class="container">
-
-          <div class="section-title">
-            <span>Contact Me</span>
-            <h2>Contact Me</h2>
-          </div>
-
-          <div class="d-flex justify-content-center">
-            <div class="social-links">
-              <h6>
-                s.solomeya@ukr.net
-              </h6>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer id="footer">
-  </footer>
-
-  <!-- Vendor JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+        const elementsToObserve = document.querySelectorAll(
+          ".image-item, .section-title, .social-links, .portfolio"
+        );
+        elementsToObserve.forEach((element) => observer.observe(element));
+      });
+    </script>
+  </body>
 </html>

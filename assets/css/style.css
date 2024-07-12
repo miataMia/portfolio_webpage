@@ -21,6 +21,20 @@ body, html {
   padding: 0;
 }
 
+.image-item .video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-item .video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container, similar to object-fit: cover for images */
+}
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -404,122 +418,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# My Resume
---------------------------------------------------------------*/
-.resume .resume-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #82909c;
-  position: relative;
-}
-
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-.resume .resume-item h5 {
-  font-size: 16px;
-  background: #eef0f2;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.resume .resume-item ul {
-  padding-left: 20px;
-}
-
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
-
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #82909c;
-}
-
-/*--------------------------------------------------------------
-# My Services
---------------------------------------------------------------*/
-.services .icon-box {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-  border: 1px solid #fff;
-  margin: 10px;
-  margin-bottom: 10px;
-}
-
-.services .icon-box:hover {
-  border-color: var(--primary-color);
-}
-
-.services .icon-box:hover .title a {
-  color: var(--primary-color);
-}
-
-.services .icon-box-summary {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-  border: 1px solid #fff;
-  margin: 10px;
-  margin-bottom: 10px;
-}
-
-.services .icon-box-summary:hover {
-  border-color: var(--primary-color);
-}
-
-.services .icon-box-summary:hover .title a {
-  color: var(--primary-color);
-}
-
-.services .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.services .description {
-  font-size: 15px;
-  line-height: 28px;
-  margin-bottom: 0;
-}
-
 .center-chevron {
   display: block;
   margin-left: auto;
@@ -536,17 +434,33 @@ section {
 }
 
 /*--------------------------------------------------------------
-# My Portfolio
+# My Portfolio - main page
 --------------------------------------------------------------*/
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
-  gap: 10px;
+  gap: 40px;
 }
 
 .image-item {
   position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.image-item:hover .text-overlay {
+  display: block;
 }
 
 .image-item img {
@@ -555,19 +469,19 @@ section {
   object-fit: cover;
 }
 
-.image-item.extended {
-  grid-row: span 2;
+.image-grid {
+  grid-template-columns: 1fr; /* Single column */
 }
 
-/* Responsive adjustments for mobile devices */
-@media (max-width: 767px) {
-  .image-grid {
-      grid-template-columns: 1fr; /* Single column on small screens */
-  }
-
-  .image-item.extended {
-      grid-row: span 1; /* Normal height for extended item on small screens */
-  }
+/*--------------------------------------------------------------
+# My Portfolio - subpages
+--------------------------------------------------------------*/
+.image-item-portfolio img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Style for the fullscreen overlay */
@@ -594,6 +508,13 @@ section {
   object-fit: contain; /* Keeps the aspect ratio */
 }
 
+.main-portfolio {
+  margin-top: 20px;
+}
+
+.portfolio-text {
+  text-align: center;
+}
 
 .bi {
   color: var(--primary-color);
@@ -649,50 +570,4 @@ section {
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
-}
-
-/* Languages */
-.languages .icon-box {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-  border: 1px solid #fff;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.languages .icon-box:hover {
-  border-color: var(--primary-color);
-}
-
-.languages .icon-box:hover .title a {
-  color: var(--primary-color);
-}
-
-/* Programs */
-.programs .icon-box {
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-  border: 1px solid #fff;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.programs .icon-box:hover {
-  border-color: var(--primary-color);
-}
-
-.programs .icon-box:hover .title a {
-  color: var(--primary-color);
 }
