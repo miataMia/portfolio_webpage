@@ -37,24 +37,6 @@
     />
 
     <link href="assets/css/style.css" rel="stylesheet" />
-    <style>
-      .image-item,
-      .section-title,
-      .social-links,
-      .portfolio {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-      }
-
-      .image-item.visible,
-      .section-title.visible,
-      .social-links.visible,
-      .portfolio.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
   </head>
 
   <body>
@@ -73,6 +55,10 @@
     </header>
 
     <section id="hero">
+      <video id="hero-video" class="hero-video" muted autoplay loop>
+        <source src="assets/video/background.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
       <div class="hero-container">
         <h1>Solomiia Skoropad</h1>
         <a href="#resume" class="btn-scroll scrollto" title="Scroll Down"
@@ -98,8 +84,8 @@
                   </video>
                 </div>
               </a>
-              <div class="text-overlay">Arian 6</div> 
-            </div>            
+              <div class="text-overlay">Ariane 6</div>
+            </div>
           </div>
         </div>
       </section>
@@ -154,6 +140,16 @@
           ".image-item, .section-title, .social-links, .portfolio"
         );
         elementsToObserve.forEach((element) => observer.observe(element));
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var heroVideo = document.getElementById("hero-video");
+
+        heroVideo.addEventListener("ended", function () {
+          heroVideo.currentTime = 0;
+          heroVideo.play();
+        });
       });
     </script>
   </body>
