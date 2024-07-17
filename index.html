@@ -76,16 +76,45 @@
             <h2>My Portfolio</h2>
           </div>
           <div class="image-grid">
-            <div class="image-item">
+            <div class="custom-image-item">
               <a href="portfolio1.html">
-                <div class="video-container">
-                  <video id="myVideo" muted>
+                <div class="custom-video-container">
+                  <video id="myCustomVideo" muted autoplay loop>
                     <source src="assets/video/7.mp4" type="video/mp4" />
                     Your browser does not support HTML5 video.
                   </video>
+                  <div class="custom-hover-text">Click for more</div>
                 </div>
               </a>
-              <div class="text-overlay">Ariane 6</div>
+              <p class="portfolio-text">Ariane 6</p>
+            </div>
+            <div class="custom-image-item">
+              <a href="portfolio2.html">
+                <div class="custom-video-container">
+                  <video id="myCustomVideo2" muted autoplay loop>
+                    <source
+                      src="assets/img/portfolio2/0001-0045.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support HTML5 video.
+                  </video>
+                  <div class="custom-hover-text">Click for more</div>
+                </div>
+              </a>
+              <p class="portfolio-text">Personal works</p>
+            </div>
+            <div class="custom-image-item">
+              <a href="portfolio3.html">
+                <div class="custom-video-container">
+                  <img
+                    id="myCustomImage2"
+                    src="assets/img/portfolio3/idea_ccr_2.jpg"
+                    alt="Personal works"
+                  />
+                  <div class="custom-hover-text">Click for more</div>
+                </div>
+              </a>
+              <p class="portfolio-text">EagleEye</p>
             </div>
           </div>
         </div>
@@ -150,6 +179,28 @@
         heroVideo.addEventListener("ended", function () {
           heroVideo.currentTime = 0;
           heroVideo.play();
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const customImageItems =
+          document.querySelectorAll(".custom-image-item");
+
+        customImageItems.forEach((customImageItem) => {
+          const customVideo = customImageItem.querySelector("video, img"); // Select both video and image elements
+          const customHoverText =
+            customImageItem.querySelector(".custom-hover-text");
+
+          customImageItem.addEventListener("mouseenter", () => {
+            customVideo.style.filter = "grayscale(100%)";
+            customHoverText.style.display = "flex";
+          });
+
+          customImageItem.addEventListener("mouseleave", () => {
+            customVideo.style.filter = "none";
+            customHoverText.style.display = "none";
+          });
         });
       });
     </script>
