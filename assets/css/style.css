@@ -123,6 +123,9 @@ section {
 #contact {
   min-height: 40vh; /* Full viewport height */
 }
+.linkedin-contact {
+  text-align: center;
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
